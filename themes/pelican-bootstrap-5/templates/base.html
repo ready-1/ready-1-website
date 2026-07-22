@@ -4,7 +4,7 @@
     {% include "head.html" %}{% block head %}{% endblock %}
   </head>
 
-  <body>
+  <body class="{% if article %}article-view{% elif page %}page-view page-{{ page.slug }}{% elif category or tag or author or output_file in ['archives.html', 'categories.html', 'tags.html', 'authors.html'] %}listing-view{% else %}index-view{% endif %}">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     {% include "navbar.html" %}
 

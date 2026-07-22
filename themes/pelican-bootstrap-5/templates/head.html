@@ -16,7 +16,13 @@
 {% elif author %}
   {% set page_title = 'Articles by ' ~ author ~ ' | ' ~ SITENAME %}
 {% elif output_file == 'archives.html' %}
-  {% set page_title = 'Insights | ' ~ SITENAME %}
+  {% set page_title = 'Field Notes | ' ~ SITENAME %}
+{% elif output_file == 'categories.html' %}
+  {% set page_title = 'Article Categories | ' ~ SITENAME %}
+{% elif output_file == 'tags.html' %}
+  {% set page_title = 'Article Tags | ' ~ SITENAME %}
+{% elif output_file == 'authors.html' %}
+  {% set page_title = 'Article Authors | ' ~ SITENAME %}
 {% endif %}
 
 {% set page_description = SITEDESCRIPTION if SITEDESCRIPTION else SITESUBTITLE %}
@@ -65,16 +71,10 @@
 
 <link
   rel="stylesheet"
-  href="/theme/assets/bootstrap-icons/font/bootstrap-icons.css"
-/>
-
-<link
-  rel="stylesheet"
   href="/theme/assets/css/{{ THEME__BOOTSWATCH }}/bootstrap.min.css"
   type="text/css"
 />
 
-<link rel="stylesheet" href="/theme/assets/css/theme.css" />
 <link rel="stylesheet" href="/theme/assets/theme_custom.css" />
 
 <link rel="sitemap" type="application/xml" href="/sitemap.xml" />

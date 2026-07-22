@@ -5,12 +5,12 @@
   <div class="row justify-content-center">
     <div class="col-lg-9">
       <header class="mb-4">
-        <div class="eyebrow">Ready-1 Insights</div>
-        <h1>{% block list_title %}Articles{% endblock %}</h1>
+        <div class="eyebrow">Ready-1 / Field notes</div>
+        <h1>{% block list_title %}Field notes{% endblock %}</h1>
       </header>
       {% set article_list = articles_page.object_list if articles_page else articles %}
       {% for listed_article in article_list %}
-      <article class="page-card mb-4">
+      <article class="page-card listing-card mb-4">
         <h2 class="h3"><a href="/{{ listed_article.url }}">{{ listed_article.title }}</a></h2>
         <p class="muted"><time datetime="{{ listed_article.date|strftime('%Y-%m-%d') }}">{{ listed_article.date|strftime(DEFAULT_DATE_FORMAT) }}</time></p>
         {% if listed_article.summary %}{{ listed_article.summary }}{% endif %}

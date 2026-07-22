@@ -1,59 +1,43 @@
-Title: About Us
+Title: About Ready-1
 Date: 2024-01-01
 Slug: about
 Category: Pages
 Author: Ready-1 Event Support
-Summary: About Ready-1 Event Support.
+Summary: Bob King's broadcast engineering practice for corporate live events.
 
-# About Ready-1
+# Broadcast engineering from setup through show.
 
-Ready-1 provides broadcast engineering support for corporate live events.
+Ready-1 is my broadcast engineering practice for corporate live events. I support camera systems, signal routing, networking, control, image matching, and troubleshooting on site.
 
-The work centers on the technical systems that make shows run cleanly: camera chains, signal flow, networking, control, image consistency, and the practical decisions that separate a smooth room from an expensive mess.
+## What I cover
 
-## What Ready-1 does
+- multi-camera video systems
+- routing, timing, and signal flow
+- networked devices and control paths
+- color pipelines and image consistency
+- engineering support during setup, rehearsal, and show
 
-Ready-1 supports producers, technical directors, and project managers who need experienced engineering judgment on event builds where reliability matters.
+I work with producers, technical directors, and project managers who need someone looking at the complete video chain.
 
-That includes:
+## On site
 
-- multi-camera broadcast systems
-- networking and control infrastructure
-- signal routing and troubleshooting
-- color and image-confidence work where visual consistency matters
-- practical on-site support under real show conditions
+I start by understanding the system as it was designed and the system that is actually in the room. I verify the important paths, keep track of changes, and make sure the crew has useful technical information.
 
-## How the work is approached
-
-The operating style is straightforward:
-
-- prepare thoroughly
-- communicate clearly
-- solve the right problem first
-- escalate bad news early
-- keep the room calm
-
-The goal is not technical theater. The goal is a system that works, a team that has good information, and a show that feels under control.
+When a fault appears, I trace it from source to destination and deal with the cause instead of guessing at symptoms. If a change affects another department or part of the system, I call it out early.
 
 ## Background
 
-Ready-1 is built on decades of hands-on production and engineering experience across live events, broadcast-style workflows, rental environments, and complex field conditions.
+My approach comes from decades of hands-on production and engineering work across live events, broadcast-style workflows, rental environments, and field conditions.
 
-That background matters because many event problems are not caused by a single broken part. They come from how design, signal flow, timing, staffing, and environment interact under pressure. Good engineering takes the whole chain seriously.
+That experience is useful because show problems rarely stay inside one box. Timing, routing, control, staffing, venue conditions, and the production schedule all affect the result.
 
-## Who this is for
+## Where I fit
 
-Ready-1 is a good fit for clients who need a senior technical hand rather than generic labor.
+Ready-1 is a useful fit for projects with:
 
-That usually means projects where:
+- a non-trivial signal path
+- multiple systems operating together
+- camera or display matching requirements
+- a need for engineering coverage through show day
 
-- the signal path is non-trivial
-- image quality matters
-- there are multiple systems that need to behave as one system
-- the cost of confusion on site is high
-
-## Final principle
-
-Competence is quieter than panic.
-
-Ready-1 exists to bring that kind of competence into the room.
+Based in Dade City, Florida, with travel work available.

@@ -1,16 +1,20 @@
-Title: Contact Us
+Title: Contact Ready-1
 Date: 2024-01-01
 Slug: contact
 Category: Pages
 Author: Ready-1 Event Support
-Summary: Contact Ready-1 Event Support.
+Summary: Contact Ready-1 about broadcast engineering for an upcoming event.
 
-# Get in touch
+# Tell me about the event.
 
-If you need Ready-1 for an upcoming event, the easiest path is email: [contact@getready1.com](mailto:contact@getready1.com)
+Email [contact@getready1.com](mailto:contact@getready1.com) or call or text [+1 813.473.2391](tel:+18134732391).
 
-You can also call or text: [+1 813.473.2391](tel:+18134732391)
+## Useful details
 
-## What to include
+- event dates and city
+- venue and schedule
+- the engineering role you need covered
+- known camera, routing, or control requirements
+- a system drawing, if one is available
 
-A quick note with your event dates, location, and what kind of support you think you need is enough to start the conversation.
+Send what you have. A short email is enough to start.

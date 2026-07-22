@@ -2,8 +2,8 @@ from datetime import datetime
 
 AUTHOR = 'Bob King'
 SITENAME = 'Ready-1'
-SITESUBTITLE = 'Broadcast engineering support for corporate live events'
-SITEDESCRIPTION = 'Ready-1 provides broadcast engineering support for corporate live events, including multi-camera systems, networking and control, signal routing, and image-confidence work.'
+SITESUBTITLE = 'Broadcast engineering for corporate live events'
+SITEDESCRIPTION = 'Broadcast engineering for corporate live events, including multi-camera systems, signal routing, networking, control, and image matching.'
 SITEURL = ''
 
 PATH = "content"

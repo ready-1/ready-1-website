@@ -123,7 +123,7 @@ def validate(output_dir: Path) -> list[str]:
             if target is not None and not target.exists():
                 errors.append(f"{relative_path}: broken local reference {url}")
 
-    homepage_heading = "Broadcast engineering for live events that cannot afford surprises."
+    homepage_heading = "Keep the picture clean."
     for relative_path in ["author/bob-king.html", "category/concepts.html"]:
         generated_file = output_dir / relative_path
         if generated_file.exists() and homepage_heading in generated_file.read_text(encoding="utf-8"):

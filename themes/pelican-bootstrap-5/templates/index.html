@@ -1,95 +1,63 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="home-hero">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <p class="hero-byline">Bob King <span>Broadcast engineer</span></p>
-      <h1>Broadcast engineering.<span>Camera to display.</span></h1>
-      <p class="hero-lede">I support corporate live events across multi-camera systems, signal routing, control networks, image matching, and on-site troubleshooting.</p>
-      <div class="hero-actions">
-        <a class="btn btn-signal" href="/contact/">Check availability</a>
-        <a class="quiet-link" href="/about/">See how I work <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-
-    <figure class="scope-image">
-      <img src="/images/nobe-chroma-du-monde.png" alt="Waveform, vectorscope, source chart, and chromaticity plot used to evaluate a video signal">
-    </figure>
+<section class="editorial-hero">
+  <p class="hero-role">Broadcast engineer for corporate live events</p>
+  <h1>Broadcast engineering.<em>Camera to display.</em></h1>
+  <div class="hero-intro">
+    <p>I support multi-camera systems, signal routing, control networks, image matching, and on-site troubleshooting from setup through show.</p>
+    <a href="/contact/">Availability and contact <span aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 
-<section class="capability-section full-bleed">
-  <div class="section-inner">
-    <header class="section-heading">
-      <div>
-        <p class="section-kicker">Capabilities</p>
-        <h2>The video chain, end to end.</h2>
-      </div>
-      <p>Engineering support for the systems between acquisition and display, including the control paths that hold them together.</p>
+<figure class="editorial-frame full-bleed">
+  <img src="/images/nobe-chroma-du-monde.png" alt="Waveform, vectorscope, source chart, and chromaticity plot used to evaluate a video signal">
+  <figcaption class="section-inner">Waveform, vectorscope, source chart, and chromaticity plot used for signal evaluation.</figcaption>
+</figure>
+
+<section class="practice-section">
+  <div class="editorial-label">Practice</div>
+  <div class="practice-content">
+    <header>
+      <h2>From camera chain to final display.</h2>
+      <p>I verify the system in the room, trace faults from source to destination, and communicate changes before they affect another part of the show.</p>
     </header>
 
-    <div class="capability-grid">
+    <div class="practice-list">
       <article>
-        <h3>Multi-camera systems</h3>
-        <p>Camera chains, timing, setup, and the handoffs into the rest of the video system.</p>
+        <h3>Camera systems</h3>
+        <p>Multi-camera chains, timing, setup, and image matching.</p>
       </article>
       <article>
-        <h3>Routing and signal flow</h3>
-        <p>Source-to-destination verification across routers, transport, processing, and distribution.</p>
+        <h3>Signal path</h3>
+        <p>Routing, transport, processing, distribution, and final destinations.</p>
       </article>
       <article>
-        <h3>Networking and control</h3>
-        <p>Connected devices, operator surfaces, control paths, and the network transport they rely on.</p>
+        <h3>Control</h3>
+        <p>Networked devices, operator surfaces, and the paths they depend on.</p>
       </article>
       <article>
-        <h3>Color and image matching</h3>
-        <p>Camera matching and color-pipeline checks from the source through the final display.</p>
+        <h3>Show support</h3>
+        <p>System checks, rehearsal changes, fault isolation, and show-day coverage.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="method-section">
-  <div class="method-copy">
-    <p class="section-kicker">On site</p>
-    <h2>Trace the path. Verify the change.</h2>
-    <p>A fault gets followed from source to destination. Changes are checked at the scopes and at the final output. The crew gets a clear technical update before the next decision.</p>
-  </div>
-
-  <ol class="show-sequence">
-    <li><strong>Setup</strong><small>Confirm the system in the room.</small></li>
-    <li><strong>System check</strong><small>Verify critical paths and destinations.</small></li>
-    <li><strong>Rehearsal</strong><small>Track changes and isolate faults.</small></li>
-    <li><strong>Show</strong><small>Support the system and the crew.</small></li>
-  </ol>
-</section>
-
-<section class="project-section full-bleed">
-  <div class="section-inner project-grid">
-    <div>
-      <p class="section-kicker">Project fit</p>
-      <h2>Engineering coverage for event video systems with real dependencies.</h2>
-    </div>
-    <ul>
-      <li>Multi-camera corporate events</li>
-      <li>Networked control and non-trivial routing</li>
-      <li>Camera and display matching</li>
-      <li>Setup, rehearsal, and show-day support</li>
-    </ul>
+<section class="note-feature">
+  <div class="editorial-label">Field note</div>
+  <div>
+    <h2><a href="/the-history-and-science-of-color-temperature.html">Color Temperature in Cameras and Displays</a></h2>
+    <p>A practical explanation of color temperature, white balance, and display white point for video systems.</p>
+    <a class="read-link" href="/the-history-and-science-of-color-temperature.html">Read the note <span aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 
-<section class="contact-section full-bleed">
-  <div class="section-inner contact-grid">
-    <div>
-      <p class="section-kicker">Next event</p>
-      <h2>Send the dates and the system details.</h2>
-    </div>
-    <div>
-      <p>Include the city, venue, schedule, and the role you need covered. Add a system drawing if one is available.</p>
-      <a class="btn btn-night" href="/contact/">Start the conversation</a>
-    </div>
+<section class="availability-section">
+  <h2>Dates, venue, system.</h2>
+  <div>
+    <p>Send the event location, schedule, role, and a system drawing if one is available.</p>
+    <a href="mailto:contact@getready1.com">contact@getready1.com</a>
   </div>
 </section>
 {% endblock %}

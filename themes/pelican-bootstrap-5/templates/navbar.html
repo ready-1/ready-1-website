@@ -1,8 +1,8 @@
 {% set current_file = output_file|default('index.html') %}
 {% set field_notes_active = current_file in ['archives.html', 'categories.html', 'tags.html', 'authors.html'] or article or category or tag or author %}
-<nav class="navbar navbar-expand-lg sticky-top" aria-label="Primary navigation">
+<nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
   <div class="container main-shell">
-    <a class="navbar-brand" href="/" aria-label="Ready-1 home"><span class="brand-dot" aria-hidden="true"></span><span>Ready-1</span></a>
+    <a class="navbar-brand" href="/" aria-label="Ready-1 home"><span>Bob King</span><span class="brand-divider" aria-hidden="true">/</span><span class="brand-secondary">Ready-1</span></a>
 
     <button
       class="navbar-toggler"

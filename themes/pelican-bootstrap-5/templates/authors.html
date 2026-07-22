@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-wrap">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 page-card">
+      <h1>Article Authors</h1>
+      <ul>
+      {% for author, author_articles in authors %}
+        <li><a href="/{{ author.url }}">{{ author }}</a> ({{ author_articles|count }})</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-wrap">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 page-card">
+      <h1>Article Tags</h1>
+      <ul>
+      {% for tag, tag_articles in tags|sort %}
+        <li><a href="/{{ tag.url }}">{{ tag }}</a> ({{ tag_articles|count }})</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg sticky-top" data-bs-theme="dark">
+{% set current_file = output_file|default('index.html') %}
+<nav class="navbar navbar-dark navbar-expand-lg sticky-top" aria-label="Primary navigation">
   <div class="container main-shell">
     <a class="navbar-brand fw-semibold" href="/">Ready-1</a>
 
@@ -16,8 +17,9 @@
 
     <div class="collapse navbar-collapse" id="navbarReady1">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link{% if current_file == 'about/index.html' %} active{% endif %}" href="/about/"{% if current_file == 'about/index.html' %} aria-current="page"{% endif %}>About</a></li>
+        <li class="nav-item"><a class="nav-link{% if current_file == 'archives.html' or article or category or tag or author %} active{% endif %}" href="/archives.html"{% if current_file == 'archives.html' or article or category or tag or author %} aria-current="page"{% endif %}>Insights</a></li>
+        <li class="nav-item"><a class="nav-link{% if current_file == 'contact/index.html' %} active{% endif %}" href="/contact/"{% if current_file == 'contact/index.html' %} aria-current="page"{% endif %}>Contact</a></li>
       </ul>
     </div>
   </div>

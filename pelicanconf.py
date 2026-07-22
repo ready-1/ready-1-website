@@ -4,7 +4,7 @@ AUTHOR = 'Bob King'
 SITENAME = 'Ready-1'
 SITESUBTITLE = 'Broadcast engineering support for corporate live events'
 SITEDESCRIPTION = 'Ready-1 provides broadcast engineering support for corporate live events, including multi-camera systems, networking and control, signal routing, and image-confidence work.'
-SITEURL = 'https://www.getready1.com'
+SITEURL = ''
 
 PATH = "content"
 
@@ -19,35 +19,40 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
-)
-
-# Social widget
-SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)
-
 USE_FOLDER_AS_CATEGORY = True
 
 STATIC_PATHS = ['pdfs', 'images', 'extras']
+EXTRA_PATH_METADATA = {
+    'extras/CNAME': {'path': 'CNAME'},
+    'extras/.nojekyll': {'path': '.nojekyll'},
+}
 # ARTICLE_PATHS = ['articles']
 
 DEFAULT_PAGINATION = 10
+PLUGINS = ['sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.6,
+        'indexes': 0.5,
+        'pages': 0.7,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'weekly',
+        'pages': 'monthly',
+    },
+}
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
-# Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+DEFAULT_DATE_FORMAT = '%B %-d, %Y'
 
-# THEME = "simple"
 THEME = 'themes/pelican-bootstrap-5'
 THEME__BOOTSWATCH = 'darkly'
+
+DEFAULT_SOCIAL_IMAGE = 'nobe-chroma-du-monde.png'
 
 COPYRIGHT_YEAR = datetime.now().year

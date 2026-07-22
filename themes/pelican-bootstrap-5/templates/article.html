@@ -1,22 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}{{ article.title }} - {{SITENAME}}{% endblock %}
-
 {% block content %}
-<div class="row">
-    <div class="col-md-8">
-
-        <div class="mb-3">
-            <h1 class="my-3"> {{ article.title }} </h1>
-            <label>Posted on <strong>{{ article.date|strftime('%Y-%m-%d') }}</strong></label>
-
-        </div>
+<section class="page-wrap">
+  <div class="row justify-content-center">
+    <article class="col-lg-9 page-card">
+        <header class="mb-4">
+            <h1 class="mb-3">{{ article.title }}</h1>
+            <p class="muted mb-0">Posted on <time datetime="{{ article.date|strftime('%Y-%m-%d') }}">{{ article.date|strftime(DEFAULT_DATE_FORMAT) }}</time></p>
+        </header>
         {% if article.og_image %}
-            <img src="/images/{{ article.og_image }}" class="w-100 my-3">
+            <img src="/images/{{ article.og_image }}" class="w-100 rounded-4 my-3" alt="{{ article.title }}">
         {% endif %}
 
         {{ article.content }}
-
-    </div>
-</div>
+    </article>
+  </div>
+</section>
 {% endblock %}

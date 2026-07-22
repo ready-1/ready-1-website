@@ -164,6 +164,12 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
+.envrc
+*.key
+*.pem
+credentials.json
 .venv
 env/
 venv/

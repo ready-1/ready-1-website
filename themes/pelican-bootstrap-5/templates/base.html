@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
   <head>
-    {% include "head.html" %} {% block head %}{% endblock %}
+    {% include "head.html" %}{% block head %}{% endblock %}
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     {% include "navbar.html" %}
 
-    <main class="container main-shell">{% block content %}{% endblock %}</main>
+    <main id="main-content" class="container main-shell" tabindex="-1">{% block content %}{% endblock %}</main>
 
     {% include "footer.html" %}
 
     <script src="/theme/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/theme/assets/js/theme.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-Title: Labot and Travel Policy
+Title: Labor and Travel Policy
 Date: 2024-01-01
 Slug: labor
 Category: Pages

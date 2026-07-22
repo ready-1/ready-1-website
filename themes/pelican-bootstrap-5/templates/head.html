@@ -1,12 +1,22 @@
 <meta charset="UTF-8" />
 <meta content="IE=edge" http-equiv="X-UA-Compatible" />
 <meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; connect-src 'none'; font-src 'self'; form-action 'self'; img-src 'self' data:; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'; upgrade-insecure-requests" />
 
-{% set page_title = SITENAME %}
+{% set page_title = SITENAME ~ ' | ' ~ SITESUBTITLE %}
 {% if page and page.title %}
   {% set page_title = page.title ~ ' | ' ~ SITENAME %}
 {% elif article and article.title %}
   {% set page_title = article.title ~ ' | ' ~ SITENAME %}
+{% elif category %}
+  {% set page_title = 'Articles in ' ~ category ~ ' | ' ~ SITENAME %}
+{% elif tag %}
+  {% set page_title = 'Articles tagged ' ~ tag ~ ' | ' ~ SITENAME %}
+{% elif author %}
+  {% set page_title = 'Articles by ' ~ author ~ ' | ' ~ SITENAME %}
+{% elif output_file == 'archives.html' %}
+  {% set page_title = 'Insights | ' ~ SITENAME %}
 {% endif %}
 
 {% set page_description = SITEDESCRIPTION if SITEDESCRIPTION else SITESUBTITLE %}
@@ -17,8 +27,25 @@
 {% endif %}
 
 {% set canonical_url = SITEURL %}
-{% if output_file %}
+{% if page %}
+  {% set canonical_url = SITEURL ~ '/' ~ page.url %}
+{% elif article %}
+  {% set canonical_url = SITEURL ~ '/' ~ article.url %}
+{% elif category %}
+  {% set canonical_url = SITEURL ~ '/' ~ category.url %}
+{% elif tag %}
+  {% set canonical_url = SITEURL ~ '/' ~ tag.url %}
+{% elif author %}
+  {% set canonical_url = SITEURL ~ '/' ~ author.url %}
+{% elif output_file and output_file != 'index.html' %}
   {% set canonical_url = SITEURL ~ '/' ~ output_file %}
+{% endif %}
+
+{% set social_image = SITEURL ~ '/images/' ~ DEFAULT_SOCIAL_IMAGE %}
+{% if page and page.og_image %}
+  {% set social_image = SITEURL ~ '/images/' ~ page.og_image %}
+{% elif article and article.og_image %}
+  {% set social_image = SITEURL ~ '/images/' ~ article.og_image %}
 {% endif %}
 
 <meta name="description" content="{{ page_description }}" />
@@ -26,34 +53,30 @@
 
 <meta property="og:title" content="{{ page_title }}" />
 <meta property="og:description" content="{{ page_description }}" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="{{ 'article' if article else 'website' }}" />
 <meta property="og:url" content="{{ canonical_url }}" />
 <meta property="og:site_name" content="{{ SITENAME }}" />
+<meta property="og:image" content="{{ social_image }}" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ page_title }}" />
 <meta name="twitter:description" content="{{ page_description }}" />
+<meta name="twitter:image" content="{{ social_image }}" />
 
 <link
   rel="stylesheet"
   href="/theme/assets/bootstrap-icons/font/bootstrap-icons.css"
 />
 
-{% if THEME__BOOTSWATCH %}
 <link
   rel="stylesheet"
   href="/theme/assets/css/{{ THEME__BOOTSWATCH }}/bootstrap.min.css"
   type="text/css"
 />
-{% else %}
-<link
-  rel="stylesheet"
-  href="/theme/assets/css/bootstrap.min.css"
-  type="text/css"
-/>
-{% endif %}
 
 <link rel="stylesheet" href="/theme/assets/css/theme.css" />
 <link rel="stylesheet" href="/theme/assets/theme_custom.css" />
+
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
 <title>{{ page_title }}</title>

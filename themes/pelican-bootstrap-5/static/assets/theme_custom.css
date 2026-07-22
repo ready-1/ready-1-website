@@ -23,6 +23,23 @@ body {
   min-height: 100vh;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 1100;
+  padding: 0.75rem 1rem;
+  color: #08111f;
+  background: var(--r1-accent);
+  border-radius: 0.5rem;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  color: #08111f;
+  transform: translateY(0);
+}
+
 a {
   color: var(--r1-accent);
 }
@@ -198,7 +215,7 @@ a:hover {
   color: var(--r1-muted);
 }
 
-.footer-r1 h5,
+.footer-r1 h2,
 .footer-r1 a,
 .footer-r1 .text-dark,
 .footer-r1 .text-white {
